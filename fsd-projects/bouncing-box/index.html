@@ -55,13 +55,13 @@
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(positionX) {
+        function moveBoxTo() {
           box.css("left", positionX);
         }
 
         // changes the text displayed on the Box
-        function changeBoxText(newText) {
-          box.text(newText);
+        function changeBoxText() {
+          box.text(0);
         }
 
         //////////////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@
          */
         function update() {
            positionX = positionX + 10
-          moveBoxTo(positionX - 200)
+          moveBoxTo(positionX)
 
         
 
@@ -98,6 +98,9 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
+          positionX = 0
+          changeBoxText(0)
+         
 
 
 
